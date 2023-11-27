@@ -42,11 +42,25 @@ public class unidad4 {
 
         return diferencia;
     }
+
+    public static void actividad6(int val_min, int val_max, int ctd_n) {
+        for (int i=1; i<=ctd_n; i++) {
+            int n_rand = (int) (Math.random() * (val_max - val_min)) + val_min;
+            System.out.println("Numero aleatorio " + i + " : " + n_rand);
+        }
+    }
+
+    public static void actividad6(int ctd_n) {
+        for (int i=1; i<=ctd_n; i++) {
+            int n_rand = (int) (Math.random() * (10 - 1)) + 1;
+            System.out.println("Numero aleatorio " + i + " : " + n_rand);
+        }
+    }
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Dame 2 horas en minutos y horas, te dire la diferencia: ");
-        System.out.println("La diferencia es: " + actividad5(sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt()));
+        System.out.println("Dame la cantidad de números aleatorios que quieres: ");
+        actividad6(sc.nextInt());
       
         System.exit(0); // fin del programa
     }
