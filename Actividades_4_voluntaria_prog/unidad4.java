@@ -20,11 +20,19 @@ public class unidad4 {
     public static double actividad2(int x1, int y1, int x2, int y2) {
         return Math.sqrt(Math.pow((x1-x2), 2)+Math.pow((y1-y2), 2)); // return distancia
     }
+
+    public static void actividad3(int n) {
+        for (int i=0; i<=n; i++) {
+            if (i%2==0) {
+                System.out.println(i + " Es par");
+            }
+        }
+    }
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Dame los puntos x1, y1, x2, y2: ");
-        System.out.println("La distancia es: " + actividad2(sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt()));
+        System.out.println("Dame un numero y te dire sus números pares: ");
+        actividad3(sc.nextInt());
       
         System.exit(0); // fin del programa
     }
