@@ -33,11 +33,20 @@ public class unidad4 {
         int seg  = segundos + minutos*60 + ((horas*60)*60);
         return seg;
     }
+
+    public static int actividad5(int hora1, int minutos1, int hora2, int minutos2) {
+        int diferencia = (hora1*60)-(hora2*60) + (minutos1-minutos2);
+        if (diferencia<0) {
+            diferencia = diferencia*-1; // si es negativo lo convierto en positivo
+        }
+
+        return diferencia;
+    }
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Dame horas, minutos y segundos y te dare segundos: ");
-        System.out.println(actividad4(sc.nextInt(), sc.nextInt(), sc.nextInt()));
+        System.out.println("Dame 2 horas en minutos y horas, te dire la diferencia: ");
+        System.out.println("La diferencia es: " + actividad5(sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt()));
       
         System.exit(0); // fin del programa
     }
