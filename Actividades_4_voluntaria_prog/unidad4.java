@@ -28,11 +28,16 @@ public class unidad4 {
             }
         }
     }
+
+    public static int actividad4(int horas, int minutos, int segundos) {
+        int seg  = segundos + minutos*60 + ((horas*60)*60);
+        return seg;
+    }
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Dame un numero y te dire sus números pares: ");
-        actividad3(sc.nextInt());
+        System.out.println("Dame horas, minutos y segundos y te dare segundos: ");
+        System.out.println(actividad4(sc.nextInt(), sc.nextInt(), sc.nextInt()));
       
         System.exit(0); // fin del programa
     }
