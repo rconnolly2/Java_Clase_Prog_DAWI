@@ -51,17 +51,48 @@ public class unidad4 {
     }
 
     public static void actividad6(int ctd_n) {
-        for (int i=1; i<=ctd_n; i++) {
-            int n_rand = (int) (Math.random() * (10 - 1)) + 1;
-            System.out.println("Numero aleatorio " + i + " : " + n_rand);
+        for (int i=0;i<=5;i++) {
+            System.out.println(i);
+        }
+    }
+
+    public static void ej10repaso(int numero) {
+        for (int i = 1; i<=(numero); i++) {
+            if (numero%i == 0) {
+                System.out.println("El divisor exacto de " + numero + " es: " + i);
+            }
+            
+        }
+    }
+
+    public static void ej13repaso(int n1, int n2) {
+        for (int i = n1; i<=n2; i++) {
+            if (i%2==0) {
+                System.out.println(i + " ES PAR");
+            }
+        }
+    }
+
+    public static void ej9repaso(int altura_triangulo) {
+        for (int i = 1; i<=altura_triangulo; i++) {
+            for (int j = 1; j<=i; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+
+        for (int i = altura_triangulo-1; i>=1; i--) {
+            for (int j = 1; j<=i; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
         }
     }
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Dame la cantidad de números aleatorios que quieres: ");
-        actividad6(sc.nextInt());
-      
+        //ej13repaso(sc.nextInt(), sc.nextInt());
+        ej9repaso(sc.nextInt());
         System.exit(0); // fin del programa
     }
         
